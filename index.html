@@ -279,28 +279,28 @@
           <div class="form-row">
             <div class="form-field">
               <label for="f-name">이름 <span class="req">*</span></label>
-              <input type="text" id="f-name" name="이름" required autocomplete="name" placeholder="홍길동" />
+              <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="홍길동" />
             </div>
             <div class="form-field">
               <label for="f-org">기관 · 회사명 <span class="req">*</span></label>
-              <input type="text" id="f-org" name="기관" required autocomplete="organization" placeholder="○○대학교 ○○학과" />
+              <input type="text" id="f-org" name="organization" required autocomplete="organization" placeholder="○○대학교 ○○학과" />
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-field">
               <label for="f-email">이메일 <span class="req">*</span></label>
-              <input type="email" id="f-email" name="이메일" required autocomplete="email" placeholder="name@example.com" />
+              <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="name@example.com" />
             </div>
             <div class="form-field">
               <label for="f-tel">연락처</label>
-              <input type="tel" id="f-tel" name="연락처" autocomplete="tel" placeholder="010-0000-0000" />
+              <input type="tel" id="f-tel" name="phone" autocomplete="tel" placeholder="010-0000-0000" />
             </div>
           </div>
 
           <div class="form-field">
             <label for="f-type">문의 유형</label>
-            <select id="f-type" name="문의유형">
+            <select id="f-type" name="inquiry_type">
               <option>학과 소식지</option>
               <option>연구소 연보</option>
               <option>기업 사보</option>
@@ -312,12 +312,12 @@
 
           <div class="form-field">
             <label for="f-msg">문의 내용 <span class="req">*</span></label>
-            <textarea id="f-msg" name="문의내용" rows="5" required
+            <textarea id="f-msg" name="message" rows="5" required
               placeholder="만들고 싶으신 매거진에 대해 편하게 적어주세요. 예상 시기나 분량이 있다면 함께 알려주시면 좋습니다."></textarea>
           </div>
 
           <label class="form-agree">
-            <input type="checkbox" id="f-agree" name="개인정보동의" value="동의함" required />
+            <input type="checkbox" id="f-agree" name="privacy_consent" value="동의함" required />
             <span>문의 답변을 위한 <strong>개인정보 수집 · 이용에 동의</strong>합니다.
               (수집 항목: 이름 · 기관명 · 이메일 · 연락처 / 보유 기간: 문의 처리 후 1년) <span class="req">*</span></span>
           </label>
