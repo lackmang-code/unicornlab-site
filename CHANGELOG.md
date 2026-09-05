@@ -48,3 +48,9 @@
     - 브랜드 폰트(고운바탕·Fraunces·Pretendard)·컬러로 렌더링, 우측에 펼침 지면 그래픽(히어로 시뮬레이션의 완성 상태)
     - `og:image:width/height`·`og:image:alt`·`twitter:card=summary_large_image` 지정
   - 대표 확정(2026-09-05): 커밋 작성자 이메일 `info01234567@gmail.com` 은 **실제 주소이며 교체 불필요**
+  - **🚀 배포 완료** — GitHub Pages
+    - 공개 주소: **https://lackmang-code.github.io/unicornlab-site/**
+    - 저장소 `lackmang-code/unicornlab-site` (public) · Pages 소스 = `main` 브랜치 루트
+    - ⚠️ **브랜치 규칙**: 공개는 `main` 만. `master` 는 로컬 아카이브이며 옛 커밋에 내부보고서가 있어 **push 금지**
+    - 검증: 전 경로 200 응답(og-card·css·js·svg·robots·sitemap), 없는 경로는 404, 콘솔 오류 0건,
+      브랜드 폰트 4종 로드, 캔버스 시뮬레이션 동작 확인
