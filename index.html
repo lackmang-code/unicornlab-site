@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>유니콘랩 | Unicorn Lab — 온라인 매거진 위탁 제작</title>
+  <meta name="description" content="유니콘랩은 학과·연구소·기업의 온라인 매거진을 기획부터 발행까지 위탁 제작하는 회사입니다." />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <meta name="theme-color" content="#16152E" />
+
+  <!-- 배포 주소: https://lackmang-code.github.io/unicornlab-site/
+       ▼ 조직 이전이나 자체 도메인 연결 시 아래 3곳 + robots.txt + sitemap.xml 의 주소를 함께 바꿀 것 -->
+  <link rel="canonical" href="https://lackmang-code.github.io/unicornlab-site/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lackmang-code.github.io/unicornlab-site/" />
+  <meta property="og:site_name" content="유니콘랩" />
+  <meta property="og:locale" content="ko_KR" />
+  <meta property="og:title" content="유니콘랩 | 온라인 매거진 위탁 제작" />
+  <meta property="og:description" content="학과·연구소·기업의 온라인 매거진을 기획부터 발행까지." />
+  <meta property="og:image" content="https://lackmang-code.github.io/unicornlab-site/og-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="유니콘랩 — 당신의 이야기를, 한 권의 매거진으로." />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <!-- 브랜드 폰트: 고운바탕(제목) · Fraunces(영문) · Noto Serif KR(본문) — 모두 OFL -->
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Noto+Serif+KR:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- 본문·UI: Pretendard (OFL) -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== 상단 고정 헤더 ===== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="유니콘랩 홈">
+        <img src="logo-lockup-inv.svg" alt="Unicorn Lab" class="logo-lockup logo-lockup--dark" />
+        <img src="logo-lockup.svg" alt="Unicorn Lab" class="logo-lockup logo-lockup--light" />
+        <span class="logo-ko">유니콘랩</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="#about">소개</a>
+        <a href="#process">서비스</a>
+        <a href="#why">강점</a>
+        <a href="#works">사례</a>
+        <a href="#contact" class="nav-cta">문의하기</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== ① 히어로 — 매거진 조립 시뮬레이션 ===== -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+
+      <div class="hero-copy">
+        <p class="hero-eyebrow">ONLINE MAGAZINE STUDIO</p>
+        <h1 class="hero-title">
+          당신의 이야기를,<br />
+          <em>한 권의 매거진</em>으로.
+        </h1>
+        <p class="hero-sub">
+          학과 · 연구소 · 기업의 온라인 매거진을<br class="br-sm" />
+          기획부터 발행까지 위탁 제작합니다.
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn-primary">매거진 제작 문의하기 →</a>
+          <a href="#process" class="btn-ghost">제작 과정 보기</a>
+        </div>
+      </div>
+
+      <figure class="hero-stage">
+        <canvas id="magazine-sim" aria-hidden="true"></canvas>
+        <figcaption class="hero-stage-cap">
+          흩어진 원고와 사진이 <strong>한 권의 지면</strong>이 되기까지 — 그 과정을 유니콘랩이 맡습니다.
+        </figcaption>
+      </figure>
+
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="아래로 스크롤">
+      <span class="scroll-cue-line" aria-hidden="true"></span>
+      SCROLL
+    </a>
+  </section>
+
+  <!-- ===== ② 회사 소개 ===== -->
+  <section id="about" class="about">
+    <div class="container">
+      <p class="section-label reveal">ABOUT</p>
+
+      <div class="about-grid">
+        <blockquote class="about-quote reveal">
+          유니콘랩은 학과 · 연구소 · 기업의 온라인 매거진을
+          <em>기획부터 발행까지</em> 위탁 제작하는 회사입니다.
+        </blockquote>
+
+        <div class="about-body reveal" style="--d:.1s">
+          <p>
+            콘텐츠에 담긴 이야기는 분명한데, 그것을 한 권의 매거진으로 엮어낼
+            시간과 손이 부족하기 마련입니다.
+          </p>
+          <p>
+            유니콘랩은 기획 회의부터 취재와 인터뷰, 에디토리얼 디자인,
+            그리고 발행 이후 운영까지 — 매거진이 독자에게 닿는 전 과정을
+            대신 책임집니다. <strong>담당자는 본업에 집중하시고, 매거진은 저희에게 맡겨주세요.</strong>
+          </p>
+        </div>
+      </div>
+
+      <ul class="about-tags reveal" style="--d:.2s">
+        <li>학과 소식지</li>
+        <li>연구소 연보</li>
+        <li>기업 사보</li>
+        <li>창간호 기획</li>
+        <li>정기 발행 운영</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ③ 서비스 / 프로세스 ===== -->
+  <section id="process" class="process">
+    <div class="container">
+      <p class="section-label section-label--on-dark reveal">SERVICE &amp; PROCESS</p>
+      <h2 class="section-title section-title--on-dark reveal" style="--d:.05s">
+        기획에서 발행까지, 한 흐름으로.
+      </h2>
+
+      <ol class="steps">
+        <li class="step reveal" style="--d:.10s">
+          <span class="step-num">01</span>
+          <h3 class="step-title">기획</h3>
+          <p class="step-desc">매거진의 방향과 콘셉트, 목차를 함께 설계합니다.</p>
+        </li>
+        <li class="step reveal" style="--d:.20s">
+          <span class="step-num">02</span>
+          <h3 class="step-title">취재 · 인터뷰</h3>
+          <p class="step-desc">현장을 취재하고 인물을 인터뷰해 이야기를 모읍니다.</p>
+        </li>
+        <li class="step reveal" style="--d:.30s">
+          <span class="step-num">03</span>
+          <h3 class="step-title">디자인</h3>
+          <p class="step-desc">잡지다운 편집과 레이아웃으로 콘텐츠를 완성합니다.</p>
+        </li>
+        <li class="step reveal" style="--d:.40s">
+          <span class="step-num">04</span>
+          <h3 class="step-title">발행 · 운영</h3>
+          <p class="step-desc">온라인에 발행하고, 이후 업데이트와 관리까지 지원합니다.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== ④ 강점 ===== -->
+  <section id="why" class="why">
+    <div class="container">
+      <p class="section-label reveal">WHY UNICORN LAB</p>
+      <h2 class="section-title reveal" style="--d:.05s">맡기면, 끝까지 갑니다.</h2>
+
+      <ul class="features">
+        <li class="feature reveal" style="--d:.10s">
+          <span class="feature-idx">01</span>
+          <h3 class="feature-title">위탁 일괄 제작</h3>
+          <p class="feature-desc">기획 · 취재 · 디자인 · 발행까지 한 번에. 담당자는 본업에 집중하세요.</p>
+        </li>
+        <li class="feature reveal" style="--d:.20s">
+          <span class="feature-idx">02</span>
+          <h3 class="feature-title">에디토리얼 디자인</h3>
+          <p class="feature-desc">잡지다운 편집 · 레이아웃 품질. 흔한 블로그형과는 다릅니다.</p>
+        </li>
+        <li class="feature reveal" style="--d:.30s">
+          <span class="feature-idx">03</span>
+          <h3 class="feature-title">운영까지 책임</h3>
+          <p class="feature-desc">발행 후 업데이트와 관리까지, 지속해서 함께합니다.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== ⑤ 제작 사례 ===== -->
+  <section id="works" class="works">
+    <div class="container">
+      <p class="section-label reveal">WORKS</p>
+      <h2 class="section-title reveal" style="--d:.05s">유니콘랩이 만든 매거진.</h2>
+
+      <ul class="work-grid">
+
+        <!-- ▼▼ 창간호 발행되면: 아래 <div class="work-cover ..."> 를 <a href="발행URL" class="work-cover ..."> 로 바꾸고
+                work-badge 를 "발행 완료 →" 로 교체하면 끝입니다. ▼▼ -->
+        <li class="work-card work-card--lead reveal" style="--d:.10s">
+          <div class="work-cover work-cover--lead">
+            <span class="work-badge">2026. 09 발행</span>
+            <span class="work-vol">Vol.<em>01</em></span>
+            <span class="work-cover-kicker">창간호</span>
+            <span class="work-cover-title">월간<br />에이전트</span>
+          </div>
+          <p class="work-name">
+            <strong>《월간 에이전트》 창간호</strong>
+            <span class="work-meta">AI 시대, 혼자 회사를 차린다는 것 · 7꼭지</span>
+          </p>
+        </li>
+
+        <li class="work-card reveal" style="--d:.20s">
+          <div class="work-cover work-cover--next">
+            <span class="work-badge work-badge--wip">제작 중</span>
+            <span class="work-vol work-vol--dim">Vol.<em>02</em></span>
+            <span class="work-cover-title">2026<br />10월호</span>
+          </div>
+          <p class="work-name">
+            <strong>《월간 에이전트》 10월호</strong>
+            <span class="work-meta">현재 기획 · 취재 진행 중</span>
+          </p>
+        </li>
+
+        <li class="work-card reveal" style="--d:.30s">
+          <a href="#contact" class="work-cover work-cover--cta">
+            <span class="work-cover-plus" aria-hidden="true">+</span>
+            <span class="work-cover-title">당신의<br />매거진이<br />여기에</span>
+          </a>
+          <p class="work-name">
+            <strong>제작 문의</strong>
+            <span class="work-meta">학과 · 연구소 · 기업 매거진</span>
+          </p>
+        </li>
+      </ul>
+
+      <p class="works-note reveal" style="--d:.35s">
+        * 《월간 에이전트》는 유니콘랩이 직접 기획 · 취재 · 편집 · 발행하는 자체 매거진입니다.
+        위탁 제작 사례는 발행되는 대로 이 자리에 함께 소개해 드립니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== ⑥ 문의 (CTA) ===== -->
+  <section id="contact" class="contact">
+    <div class="container contact-inner">
+      <p class="section-label section-label--on-dark reveal">CONTACT</p>
+      <h2 class="contact-title reveal" style="--d:.05s">매거진을 만들고 싶으신가요?</h2>
+      <p class="contact-sub reveal" style="--d:.10s">
+        기획부터 발행까지, 유니콘랩이 함께합니다. 편하게 문의해 주세요.
+      </p>
+
+      <div class="contact-info reveal" style="--d:.15s">
+        <a href="mailto:info@nextio.ai.kr" class="contact-line">
+          <span class="contact-key">EMAIL</span>
+          <span class="contact-val">info@nextio.ai.kr</span>
+        </a>
+        <a href="tel:01039386918" class="contact-line">
+          <span class="contact-key">PHONE</span>
+          <span class="contact-val">010-3938-6918</span>
+        </a>
+      </div>
+
+      <a href="mailto:info@nextio.ai.kr?subject=매거진%20제작%20문의" class="btn-primary reveal" style="--d:.2s">
+        문의 메일 보내기 →
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== 푸터 ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="footer-logo">
+        <img src="logo-lockup-inv.svg" alt="Unicorn Lab" class="footer-lockup" />
+        <span class="footer-ko">유니콘랩</span>
+      </span>
+      <span class="footer-copy">© 2026 유니콘랩 (Unicorn Lab). All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="magazine-sim.js"></script>
+  <script src="site.js"></script>
+</body>
+</html>

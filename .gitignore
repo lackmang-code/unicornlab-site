@@ -1,0 +1,10 @@
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+~$*
+
+# 내부 문서 — 공개 저장소에 올리지 않는다
+보고_*.md
+_*.html
+.playwright-mcp/
