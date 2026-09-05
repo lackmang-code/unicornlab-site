@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 900" width="900" height="900" role="img" aria-label="한 사람을 둘러싼 AI 에이전트 궤도 — 월간 에이전트 창간호 키비주얼">
+<defs>
+<radialGradient id="bg" cx="50%" cy="42%" r="72%">
+    <stop offset="0%" stop-color="#5B5FCF" stop-opacity=".55"/>
+    <stop offset="55%" stop-color="#2D2A6E" stop-opacity=".45"/>
+    <stop offset="100%" stop-color="#16152E" stop-opacity="0"/>
+  </radialGradient>
+<radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#FF7A59" stop-opacity=".85"/>
+    <stop offset="45%" stop-color="#FF7A59" stop-opacity=".22"/>
+    <stop offset="100%" stop-color="#FF7A59" stop-opacity="0"/>
+  </radialGradient>
+<filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+    <feGaussianBlur stdDeviation="7"/>
+  </filter>
+<style>@media (prefers-reduced-motion:no-preference){.spin{animation:sp 64s linear infinite;transform-origin:450px 450px}.spin2{animation:sp 96s linear infinite reverse;transform-origin:450px 450px}@keyframes sp{to{transform:rotate(360deg)}}}</style>
+</defs>
+<circle cx="450.0" cy="450.0" r="400" fill="url(#bg)" opacity=".55"/>
+<circle cx="450.0" cy="450.0" r="330" fill="url(#glow)" opacity=".62"/>
+<g stroke="#FFFFFF" stroke-opacity=".18" stroke-width="1">
+<line x1="450.0" y1="450.0" x2="592.7" y2="403.6"/>
+<line x1="450.0" y1="450.0" x2="418.8" y2="596.7"/>
+<line x1="450.0" y1="450.0" x2="338.5" y2="349.6"/>
+<line x1="450.0" y1="450.0" x2="658.5" y2="551.7"/>
+<line x1="450.0" y1="450.0" x2="417.7" y2="679.7"/>
+<line x1="450.0" y1="450.0" x2="221.5" y2="490.3"/>
+<line x1="450.0" y1="450.0" x2="341.1" y2="245.2"/>
+<line x1="450.0" y1="450.0" x2="611.2" y2="283.1"/>
+<line x1="450.0" y1="450.0" x2="760.9" y2="406.3"/>
+<line x1="450.0" y1="450.0" x2="678.0" y2="665.9"/>
+<line x1="450.0" y1="450.0" x2="423.4" y2="762.9"/>
+<line x1="450.0" y1="450.0" x2="188.8" y2="624.3"/>
+<line x1="450.0" y1="450.0" x2="150.9" y2="354.5"/>
+<line x1="450.0" y1="450.0" x2="338.2" y2="156.6"/>
+<line x1="450.0" y1="450.0" x2="609.7" y2="179.6"/>
+</g>
+<circle cx="450.0" cy="450.0" r="150" fill="none" stroke="#5B5FCF" stroke-opacity="0.62" stroke-width="1.4"/>
+<circle cx="450.0" cy="450.0" r="232" fill="none" stroke="#5B5FCF" stroke-opacity="0.52" stroke-width="1.4"/>
+<circle cx="450.0" cy="450.0" r="314" fill="none" stroke="#5B5FCF" stroke-opacity="0.42" stroke-width="1.4" stroke-dasharray="2 9"/>
+<g class="spin">
+<circle cx="592.7" cy="403.6" r="23.8" fill="#FF7A59" opacity=".16" filter="url(#soft)"/>
+<circle cx="592.7" cy="403.6" r="11.3" fill="#FF7A59" opacity="0.95"/>
+<circle cx="609.5" cy="415.0" r="2.4" fill="#FFFFFF" opacity=".5"/>
+<circle cx="418.8" cy="596.7" r="21.2" fill="#FFD166" opacity=".16" filter="url(#soft)"/>
+<circle cx="418.8" cy="596.7" r="10.1" fill="#FFD166" opacity="0.9"/>
+<circle cx="338.5" cy="349.6" r="24.9" fill="#8F93E8" opacity=".16" filter="url(#soft)"/>
+<circle cx="338.5" cy="349.6" r="11.9" fill="#8F93E8" opacity="0.72"/>
+<circle cx="340.0" cy="328.8" r="2.4" fill="#FFFFFF" opacity=".5"/>
+</g>
+<g class="spin2">
+<circle cx="658.5" cy="551.7" r="20.1" fill="#FFD166" opacity=".16" filter="url(#soft)"/>
+<circle cx="658.5" cy="551.7" r="9.6" fill="#FFD166" opacity="0.9"/>
+<circle cx="662.4" cy="569.9" r="2.4" fill="#FFFFFF" opacity=".5"/>
+<circle cx="417.7" cy="679.7" r="24.1" fill="#8F93E8" opacity=".16" filter="url(#soft)"/>
+<circle cx="417.7" cy="679.7" r="11.5" fill="#8F93E8" opacity="0.72"/>
+<circle cx="221.5" cy="490.3" r="15.8" fill="#FFFFFF" opacity=".16" filter="url(#soft)"/>
+<circle cx="221.5" cy="490.3" r="7.5" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="209.2" cy="479.2" r="2.4" fill="#FFFFFF" opacity=".5"/>
+<circle cx="341.1" cy="245.2" r="22.4" fill="#FF7A59" opacity=".16" filter="url(#soft)"/>
+<circle cx="341.1" cy="245.2" r="10.7" fill="#FF7A59" opacity="0.95"/>
+<circle cx="611.2" cy="283.1" r="17.1" fill="#FFD166" opacity=".16" filter="url(#soft)"/>
+<circle cx="611.2" cy="283.1" r="8.1" fill="#FFD166" opacity="0.9"/>
+<circle cx="628.2" cy="284.9" r="2.4" fill="#FFFFFF" opacity=".5"/>
+</g>
+<g class="spin">
+<circle cx="760.9" cy="406.3" r="13.6" fill="#8F93E8" opacity=".16" filter="url(#soft)"/>
+<circle cx="760.9" cy="406.3" r="6.5" fill="#8F93E8" opacity="0.72"/>
+<circle cx="772.1" cy="417.1" r="2.4" fill="#FFFFFF" opacity=".5"/>
+<circle cx="678.0" cy="665.9" r="20.2" fill="#FFFFFF" opacity=".16" filter="url(#soft)"/>
+<circle cx="678.0" cy="665.9" r="9.6" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="423.4" cy="762.9" r="11.8" fill="#FF7A59" opacity=".16" filter="url(#soft)"/>
+<circle cx="423.4" cy="762.9" r="5.6" fill="#FF7A59" opacity="0.95"/>
+<circle cx="411.2" cy="770.9" r="2.4" fill="#FFFFFF" opacity=".5"/>
+<circle cx="188.8" cy="624.3" r="16.4" fill="#FFD166" opacity=".16" filter="url(#soft)"/>
+<circle cx="188.8" cy="624.3" r="7.8" fill="#FFD166" opacity="0.9"/>
+<circle cx="150.9" cy="354.5" r="10.9" fill="#8F93E8" opacity=".16" filter="url(#soft)"/>
+<circle cx="150.9" cy="354.5" r="5.2" fill="#8F93E8" opacity="0.72"/>
+<circle cx="146.0" cy="341.1" r="2.4" fill="#FFFFFF" opacity=".5"/>
+<circle cx="338.2" cy="156.6" r="10.6" fill="#FFFFFF" opacity=".16" filter="url(#soft)"/>
+<circle cx="338.2" cy="156.6" r="5.0" fill="#FFFFFF" opacity="0.72"/>
+<circle cx="609.7" cy="179.6" r="20.0" fill="#FF7A59" opacity=".16" filter="url(#soft)"/>
+<circle cx="609.7" cy="179.6" r="9.5" fill="#FF7A59" opacity="0.95"/>
+<circle cx="628.1" cy="177.3" r="2.4" fill="#FFFFFF" opacity=".5"/>
+</g>
+<circle cx="450.0" cy="450.0" r="74" fill="#16152E" opacity=".55"/>
+<circle cx="450.0" cy="450.0" r="74" fill="none" stroke="#FF7A59" stroke-opacity=".5" stroke-width="1.4"/>
+<circle cx="450.0" cy="450.0" r="96" fill="none" stroke="#FF7A59" stroke-opacity=".22" stroke-width="1"/>
+<circle cx="450.0" cy="426.0" r="21" fill="#FF7A59"/>
+<path d="M 412.0 494.0 a 38 38 0 0 1 76 0 z" fill="#FF7A59"/>
+</svg>

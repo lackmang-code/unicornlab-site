@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" font-family="Malgun Gothic, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2D2A6E"/><stop offset="1" stop-color="#16152E"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.85" cy="0.9" r="0.5">
+      <stop offset="0" stop-color="#FF7A59" stop-opacity="0.5"/><stop offset="1" stop-color="#FF7A59" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1040" cy="560" r="320" fill="url(#glow)"/>
+
+  <!-- 상단 라벨 -->
+  <text x="80" y="100" fill="#cfceed" font-size="24" font-weight="600" letter-spacing="4">월간 에이전트 · MONTHLY AGENT</text>
+  <text x="80" y="158" fill="#FFD166" font-size="30" font-weight="700" letter-spacing="1">Vol.1 · 창간호 · 2026</text>
+
+  <!-- 대제목 -->
+  <text x="76" y="290" fill="#FFFFFF" font-size="92" font-weight="800" letter-spacing="-1">AI 시대,</text>
+  <text x="76" y="392" fill="#FFFFFF" font-size="92" font-weight="800" letter-spacing="-1">혼자 회사를</text>
+  <text x="76" y="494" fill="#FF7A59" font-size="92" font-weight="800" letter-spacing="-1">차린다는 것</text>
+
+  <!-- 하단 슬로건 -->
+  <rect x="80" y="556" width="44" height="6" fill="#FF7A59"/>
+  <text x="80" y="600" fill="#cfceed" font-size="26" font-weight="500">AI 시대에 혼자 회사를 차리고 키우는 사람들을 위한 매거진</text>
+
+  <!-- 우상단 발행 -->
+  <text x="1120" y="100" fill="#9b98c4" font-size="22" font-weight="600" text-anchor="end">유니콘랩</text>
+</svg>

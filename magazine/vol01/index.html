@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ✏️ EDIT 1: 호별 제목/설명 (브라우저 탭 + 검색결과) -->
+<title>월간 에이전트 · 창간호 — AI 시대, 혼자 회사를 차린다는 것</title>
+<meta name="description" content="AI 시대에 혼자 회사를 차리고 키우는 사람들을 위한 매거진. 창간호.">
+
+<!-- ✏️ EDIT 2: OG 공유 미리보기 (카톡·SNS·메일 링크 썸네일) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="월간 에이전트 · 창간호">
+<meta property="og:description" content="AI 시대, 혼자 회사를 차린다는 것 — 솔로프러너를 위한 매거진.">
+<meta property="og:image" content="https://lackmang-code.github.io/unicornlab-site/magazine/vol01/assets/og_cover.png"><!-- 1200×630 표지 썸네일 (제작 예정) -->
+<meta property="og:url" content="https://lackmang-code.github.io/unicornlab-site/magazine/vol01/">
+
+<link rel="icon" href="assets/favicon.png"><!-- 매거진/유니콘랩 심볼 (제작 예정) -->
+
+<!-- 브랜드 토큰: 인터넷 연결 시 웹폰트로 표시 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Gowun+Batang:wght@400;700&family=Noto+Serif+KR:wght@300;400;500;600&family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+:root{
+  --indigo-deep:#2D2A6E; --indigo:#5B5FCF; --coral:#FF7A59;
+  --ocher:#FFD166; --navy:#16152E; --light:#F7F6F2; --white:#FFFFFF;
+  --f-impact:'Pretendard',sans-serif; --f-title:'Gowun Batang',serif;
+  --f-body:'Noto Serif KR',serif; --f-en:'Fraunces',serif; --f-ui:'Pretendard',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--light);color:var(--navy);font-family:var(--f-body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+
+/* ===== 표지 (Cover) ===== */
+.cover{min-height:100vh;background:var(--indigo-deep);color:var(--white);
+  display:flex;flex-direction:column;justify-content:space-between;
+  padding:48px 32px;position:relative;overflow:hidden}
+.cover::after{content:"";position:absolute;right:-160px;bottom:-140px;
+  width:420px;height:420px;border-radius:50%;
+  background:radial-gradient(circle,var(--coral) 0%,transparent 70%);opacity:.22}
+/* 표지 키비주얼 — 한 사람을 둘러싼 에이전트 궤도 */
+.cover-key{position:absolute;right:-8vw;top:50%;transform:translateY(-50%);
+  width:min(78vh,760px);aspect-ratio:1;z-index:0;pointer-events:none;
+  opacity:.92;mask-image:radial-gradient(circle at 50% 50%,#000 58%,transparent 88%);
+  -webkit-mask-image:radial-gradient(circle at 50% 50%,#000 58%,transparent 88%)}
+.cover-key img{width:100%;height:100%;display:block}
+@media(max-width:900px){
+  .cover-key{right:-30vw;top:auto;bottom:-16vh;transform:none;width:min(104vw,640px);opacity:.34}
+  .cover-mid{position:relative;z-index:2}
+}
+.cover-top{display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--f-ui);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#cfceed}
+.cover-mid{position:relative;z-index:2;margin:auto 0}
+.cover .issue{font-family:var(--f-en);font-style:italic;font-size:18px;color:var(--ocher);margin-bottom:16px}
+.cover h1{font-family:var(--f-impact);font-weight:800;font-size:clamp(48px,11vw,108px);line-height:.98;letter-spacing:-.01em}
+.cover h1 .coral{color:var(--coral)}
+/* ✏️ EDIT 3: 표지 카피 */
+.cover .lead{font-family:var(--f-title);font-size:clamp(18px,3.4vw,26px);
+  margin-top:24px;max-width:620px;color:#e8e7f5;line-height:1.5}
+.cover-bot{position:relative;z-index:2;font-family:var(--f-ui);font-size:13px;color:#cfceed;
+  display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+.scroll-hint{font-family:var(--f-ui);font-size:12px;letter-spacing:.1em;opacity:.8}
+
+/* ===== 목차 (TOC) ===== */
+.toc{max-width:860px;margin:0 auto;padding:72px 28px 96px}
+.toc .kicker{font-family:var(--f-ui);font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;font-size:13px;color:var(--coral)}
+.toc h2{font-family:var(--f-impact);font-weight:800;font-size:clamp(32px,6vw,52px);margin:8px 0 8px}
+.toc .sub{font-family:var(--f-ui);color:#5a5872;font-size:15px;margin-bottom:40px}
+
+.item{display:flex;gap:22px;align-items:baseline;padding:26px 4px;
+  border-top:1px solid #e3e1d8;transition:background .15s}
+.item:last-child{border-bottom:1px solid #e3e1d8}
+.item:hover{background:#efeee8}
+.item .no{font-family:var(--f-en);font-style:italic;font-size:26px;color:var(--indigo);min-width:46px}
+.item .body{flex:1}
+.item .corner{font-family:var(--f-ui);font-size:12px;font-weight:600;letter-spacing:.04em;
+  color:var(--coral);display:block;margin-bottom:4px}
+.item .ttl{font-family:var(--f-title);font-weight:700;font-size:clamp(19px,3.2vw,24px);line-height:1.3}
+.item .desc{font-family:var(--f-body);font-size:15px;color:#4a4860;margin-top:6px;line-height:1.5}
+.item .pages{font-family:var(--f-ui);font-size:13px;color:#8a889c;white-space:nowrap}
+
+.status{font-family:var(--f-ui);font-size:11px;font-weight:600;padding:3px 9px;border-radius:999px;
+  display:inline-block;margin-left:8px;vertical-align:middle}
+.st-ready{background:#1f9d63;color:#fff}      /* 완성 — 링크 활성 */
+.st-prep{background:#e3e1d8;color:#8a889c}     /* 준비중 — 링크 비활성 */
+
+.foot{text-align:center;padding:48px 24px;background:var(--navy);color:#bdbcd0;
+  font-family:var(--f-ui);font-size:13px;line-height:1.7}
+.foot .notice{color:#8a889c;font-size:12px;margin-top:10px}
+
+@media(max-width:560px){
+  .item{flex-direction:column;gap:6px}
+  .item .no{font-size:20px}
+  .item .pages{font-size:12px}
+}
+</style>
+</head>
+<body>
+
+<!-- ========================= 표지 ========================= -->
+<header class="cover">
+  <div class="cover-top">
+    <span>월간 에이전트 · Monthly Agent</span>
+    <span>유니콘랩</span>
+  </div>
+
+  <div class="cover-key"><img src="assets/cover_key.svg" alt="" aria-hidden="true"></div>
+  <div class="cover-mid">
+    <!-- ✏️ EDIT 4: 호수 -->
+    <div class="issue">Vol.1 · 창간호 · 2026.09</div>
+    <!-- ✏️ EDIT 5: 표지 제호/타이틀 -->
+    <h1>AI 시대,<br>혼자 회사를<br><span class="coral">차린다는 것</span></h1>
+    <p class="lead">AI 에이전트가 총무·영업·편집을 대신 굴려주는 시대 —
+      무엇이 가능해졌고, 무엇은 여전히 사람의 몫인가.</p>
+  </div>
+
+  <div class="cover-bot">
+    <span>AI 시대에 혼자 회사를 차리고 키우는 사람들을 위한 매거진</span>
+    <span class="scroll-hint">↓ 목차 보기</span>
+  </div>
+</header>
+
+<!-- ========================= 목차 ========================= -->
+<main class="toc">
+  <p class="kicker">Contents · 창간호</p>
+  <h2>이번 호에 담긴 것</h2>
+  <p class="sub">혼자 일하는 모두에게 — 동료감 · 실전 도구 · 영감</p>
+
+  <!-- 모든 꼭지는 단일 롱폼(창간호_롱폼_vol01.html)의 앵커로 연결 -->
+
+  <!-- 1. 창간사 -->
+  <a class="item" href="magazine.html#letter">
+    <span class="no">01</span>
+    <div class="body">
+      <span class="corner">Editor's Letter · 창간사</span>
+      <div class="ttl">혼자 일하는 당신에게<span class="status st-ready">완성</span></div>
+      <p class="desc">왜 《월간 에이전트》인가 — 혼자 일하는 모두에게 보내는 첫인사.</p>
+    </div>
+    <span class="pages">1면</span>
+  </a>
+
+  <!-- 2. 커버스토리 -->
+  <a class="item" href="magazine.html">
+    <span class="no">02</span>
+    <div class="body">
+      <span class="corner">커버스토리</span>
+      <div class="ttl">AI 시대, 혼자 회사를 차린다는 것<span class="status st-ready">완성</span></div>
+      <p class="desc">가능해진 것 / 사람의 몫 / 유니콘랩 사례. 이번 호의 메인 피처.</p>
+    </div>
+    <span class="pages">4~5면</span>
+  </a>
+
+  <!-- 3. 고정① 이달의 1인 유니콘 -->
+  <a class="item" href="magazine.html#unicorn">
+    <span class="no">03</span>
+    <div class="body">
+      <span class="corner">고정① 이달의 1인 유니콘</span>
+      <div class="ttl">혼자 만든 앱을 1,100억에 팔았다 — 석 달 뒤, 그 값은 2,000억이 됐다<span class="status st-ready">완성</span></div>
+      <p class="desc">마오르 슐로모 / Base44 — 도구를 쥔 '사람' 이야기. 미담 + 팩트체크.</p>
+    </div>
+    <span class="pages">1.5~2면</span>
+  </a>
+
+  <!-- 4. 고정② AI 편집장 칼럼 -->
+  <a class="item" href="magazine.html#column">
+    <span class="no">04</span>
+    <div class="body">
+      <span class="corner">고정② AI 편집장 칼럼</span>
+      <div class="ttl">비서의 시대는 끝났다 — 에이전트 AI<span class="status st-ready">완성</span></div>
+      <p class="desc">AI가 일하는 방식의 전환: 묻는 일에서 맡기는 일로.</p>
+    </div>
+    <span class="pages">2면</span>
+  </a>
+
+  <!-- 5. 고정③ AI 전쟁 -->
+  <a class="item" href="magazine.html#aiwar">
+    <span class="no">05</span>
+    <div class="body">
+      <span class="corner">고정③ AI 전쟁</span>
+      <div class="ttl">혼자 일하는 당신은 누구를 고용할 것인가<span class="status st-ready">완성</span></div>
+      <p class="desc">클로드 Opus 5 · GPT-5.6 Sol · 제미나이 3.7 Flash, 종목별 승자. 본지는 Claude로 제작됨(공정 고지).</p>
+    </div>
+    <span class="pages">2면</span>
+  </a>
+
+  <!-- 6. 랩 비하인드 -->
+  <a class="item" href="magazine.html#making">
+    <span class="no">06</span>
+    <div class="body">
+      <span class="corner">Making · 랩 비하인드</span>
+      <div class="ttl">이 매거진은 한 사람과 AI가 만들었습니다<span class="status st-ready">완성</span></div>
+      <p class="desc">정체성의 실연이자 회사 소개. 콘텐츠로 회사를 증명한다.</p>
+    </div>
+    <span class="pages">1~2면</span>
+  </a>
+
+  <!-- 7. 클로징 -->
+  <a class="item" href="magazine.html#closing">
+    <span class="no">07</span>
+    <div class="body">
+      <span class="corner">Closing</span>
+      <div class="ttl">혼자지만, 혼자가 아니도록<span class="status st-ready">완성</span></div>
+      <p class="desc">창간호 마무리 + 2호 예고(피터 레벨스 · 휴머노이드 로봇).</p>
+    </div>
+    <span class="pages">1면</span>
+  </a>
+</main>
+
+<footer class="foot">
+  <div>《월간 에이전트》 · 발행 유니콘랩</div>
+  <div class="notice">본지의 기사·칼럼은 AI로 제작되며, 발행 전 팩트체크를 거칩니다.
+    · 창간호 2026.09 · 외부 공개는 대표 확인 후</div>
+</footer>
+
+</body>
+</html>
