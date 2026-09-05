@@ -506,26 +506,75 @@ ul, ol { list-style: none; }
   margin-bottom: 6px;
 }
 
-/* 대표 카드(창간호) */
+/* 대표 카드(창간호) — 실제 표지 형태 */
 .work-cover--lead {
-  background: linear-gradient(155deg, var(--indigo-deep) 0%, var(--navy) 100%);
+  background: linear-gradient(160deg, #232057 0%, var(--navy) 100%);
   border-color: transparent;
+  justify-content: space-between;
+  padding: 30px 28px 32px;
 }
+/* 표지 키비주얼 (편집제작팀 제작) */
+.cover-art {
+  position: absolute;
+  left: 50%; top: 46%;
+  width: 118%;
+  transform: translate(-50%, -50%);
+  opacity: .95;
+  pointer-events: none;
+}
+/* 제호·커버스토리 가독성 확보용 상하 그라데이션 */
 .work-cover--lead::after {
   content: "";
-  position: absolute;
-  right: -18%; top: -12%;
-  width: 68%; height: 52%;
-  background: radial-gradient(circle,
-              rgba(255, 122, 89, 0.42) 0%,
-              rgba(255, 122, 89, 0) 66%);
+  position: absolute; inset: 0;
+  background: linear-gradient(to bottom,
+              rgba(22, 21, 46, 0.82) 0%,
+              rgba(22, 21, 46, 0.18) 34%,
+              rgba(22, 21, 46, 0.42) 62%,
+              rgba(22, 21, 46, 0.92) 100%);
 }
-.work-cover--lead .work-cover-title {
+
+.cover-masthead,
+.cover-foot { position: relative; z-index: 1; display: flex; flex-direction: column; }
+
+.cover-kicker {
+  font-family: var(--font-ui);
+  font-size: 0.76rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--ocher);
+  margin-bottom: 8px;
+}
+.cover-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.55rem, 2.6vw, 2.1rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
   color: var(--white);
-  font-size: clamp(1.5rem, 2.4vw, 2rem);
-  position: relative;
-  z-index: 1;
 }
+.cover-en {
+  font-family: var(--font-en);
+  font-weight: 600;
+  font-size: 0.64rem;
+  letter-spacing: 0.30em;
+  color: rgba(255, 255, 255, 0.48);
+  margin-top: 9px;
+}
+
+.cover-line {
+  width: 38px; height: 2px;
+  background: var(--coral);
+  margin-bottom: 14px;
+}
+.cover-story {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.15rem, 1.9vw, 1.5rem);
+  line-height: 1.45;
+  color: var(--white);
+}
+/* 창간호 카드에서는 배지를 오른쪽 위로 (왼쪽 위는 제호 자리) */
+.work-cover--lead .work-badge { left: auto; right: 26px; top: 30px; }
 .work-badge {
   position: absolute;
   top: 24px; left: 26px;
@@ -637,7 +686,15 @@ ul, ol { list-style: none; }
               rgba(22, 21, 46, 0) 60%);
   pointer-events: none;
 }
-.contact-inner { position: relative; z-index: 1; text-align: center; }
+.contact-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 0.85fr 1fr;
+  gap: clamp(36px, 5vw, 72px);
+  align-items: start;
+}
+.contact-copy { padding-top: 6px; }
 
 .contact-title {
   font-family: var(--font-display);
@@ -656,10 +713,9 @@ ul, ol { list-style: none; }
 
 .contact-info {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-bottom: 46px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
 }
 .contact-line {
   display: flex;
@@ -687,6 +743,101 @@ ul, ol { list-style: none; }
   font-weight: 500;
   color: var(--white);
 }
+
+/* ---------- 문의 폼 ---------- */
+.contact-form-wrap {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--hair-dark);
+  border-radius: 5px;
+  padding: clamp(24px, 3.2vw, 38px);
+}
+
+.form-hp { position: absolute; left: -9999px; opacity: 0; }
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.form-field { display: flex; flex-direction: column; margin-bottom: 16px; }
+.form-row .form-field { margin-bottom: 0; }
+.form-row { margin-bottom: 16px; }
+
+.form-field label {
+  font-family: var(--font-ui);
+  font-size: 0.84rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.72);
+  margin-bottom: 8px;
+}
+.req { color: var(--coral); }
+
+.form input[type="text"],
+.form input[type="email"],
+.form input[type="tel"],
+.form select,
+.form textarea {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  color: var(--white);
+  background: rgba(22, 21, 46, 0.55);
+  border: 1px solid var(--hair-dark);
+  border-radius: 3px;
+  padding: 13px 15px;
+  width: 100%;
+  transition: border-color .2s var(--ease), background .2s var(--ease);
+}
+.form textarea { resize: vertical; min-height: 118px; line-height: 1.7; }
+.form select { appearance: none; cursor: pointer; }
+.form select option { background: #1B1A38; color: #fff; }
+
+.form ::placeholder { color: rgba(255, 255, 255, 0.30); }
+
+.form input:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--coral);
+  background: rgba(22, 21, 46, 0.8);
+}
+.form .is-invalid { border-color: #FF5C5C; }
+
+.form-agree {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 6px 0 24px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.55);
+  cursor: pointer;
+}
+.form-agree input { margin-top: 3px; accent-color: var(--coral); flex: none; }
+.form-agree strong { color: rgba(255, 255, 255, 0.82); font-weight: 600; }
+
+.form-submit { width: 100%; text-align: center; border: 0; cursor: pointer; font-size: 1rem; }
+.form-submit:disabled { opacity: .55; cursor: default; transform: none; box-shadow: none; }
+
+.form-status {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin-top: 16px;
+  display: none;
+}
+.form-status.is-on { display: block; }
+.form-status.is-ok  { color: #7BE0B0; }
+.form-status.is-err { color: #FF8A8A; }
+
+.form-fallback {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.38);
+  margin-top: 14px;
+}
+.form-fallback a { color: rgba(255, 255, 255, 0.62); border-bottom: 1px solid rgba(255,255,255,.25); }
+.form-fallback a:hover { color: var(--coral); border-color: var(--coral); }
 
 /* =========================================================
    푸터
@@ -741,6 +892,9 @@ ul, ol { list-style: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 30px; }
 
+  .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+  .contact-copy { max-width: 620px; }
+
   .steps { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: 1fr; }
 
@@ -763,7 +917,8 @@ ul, ol { list-style: none; }
 
   .hero-actions { gap: 14px; }
   .btn-primary { width: 100%; text-align: center; }
-  .contact-line { width: 100%; justify-content: center; }
+  .contact-line { width: 100%; }
+  .form-row { grid-template-columns: 1fr; }
 }
 
 /* 모션 최소화 설정 존중 */

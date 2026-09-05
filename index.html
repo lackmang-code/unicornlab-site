@@ -191,10 +191,20 @@
                 work-badge 를 "발행 완료 →" 로 교체하면 끝입니다. ▼▼ -->
         <li class="work-card work-card--lead reveal" style="--d:.10s">
           <div class="work-cover work-cover--lead">
+            <img class="cover-art" src="cover-vol01.svg" alt="" aria-hidden="true" />
+
             <span class="work-badge">2026. 09 발행</span>
-            <span class="work-vol">Vol.<em>01</em></span>
-            <span class="work-cover-kicker">창간호</span>
-            <span class="work-cover-title">월간<br />에이전트</span>
+
+            <span class="cover-masthead">
+              <span class="cover-kicker">창간호 · Vol.01</span>
+              <span class="cover-title">월간 에이전트</span>
+              <span class="cover-en">MONTHLY AGENT</span>
+            </span>
+
+            <span class="cover-foot">
+              <span class="cover-line"></span>
+              <span class="cover-story">AI 시대,<br />혼자 회사를<br />차린다는 것</span>
+            </span>
           </div>
           <p class="work-name">
             <strong>《월간 에이전트》 창간호</strong>
@@ -233,29 +243,94 @@
     </div>
   </section>
 
-  <!-- ===== ⑥ 문의 (CTA) ===== -->
+  <!-- ===== ⑥ 문의 ===== -->
   <section id="contact" class="contact">
     <div class="container contact-inner">
-      <p class="section-label section-label--on-dark reveal">CONTACT</p>
-      <h2 class="contact-title reveal" style="--d:.05s">매거진을 만들고 싶으신가요?</h2>
-      <p class="contact-sub reveal" style="--d:.10s">
-        기획부터 발행까지, 유니콘랩이 함께합니다. 편하게 문의해 주세요.
-      </p>
 
-      <div class="contact-info reveal" style="--d:.15s">
-        <a href="mailto:info@nextio.ai.kr" class="contact-line">
-          <span class="contact-key">EMAIL</span>
-          <span class="contact-val">info@nextio.ai.kr</span>
-        </a>
-        <a href="tel:01039386918" class="contact-line">
-          <span class="contact-key">PHONE</span>
-          <span class="contact-val">010-3938-6918</span>
-        </a>
+      <div class="contact-copy">
+        <p class="section-label section-label--on-dark reveal">CONTACT</p>
+        <h2 class="contact-title reveal" style="--d:.05s">매거진을 만들고 싶으신가요?</h2>
+        <p class="contact-sub reveal" style="--d:.10s">
+          기획부터 발행까지, 유니콘랩이 함께합니다.<br />
+          남겨주시면 <strong>1~2 영업일 안에</strong> 답변드리겠습니다.
+        </p>
+
+        <div class="contact-info reveal" style="--d:.15s">
+          <a href="mailto:info@nextio.ai.kr" class="contact-line">
+            <span class="contact-key">EMAIL</span>
+            <span class="contact-val">info@nextio.ai.kr</span>
+          </a>
+          <a href="tel:01039386918" class="contact-line">
+            <span class="contact-key">PHONE</span>
+            <span class="contact-val">010-3938-6918</span>
+          </a>
+        </div>
       </div>
 
-      <a href="mailto:info@nextio.ai.kr?subject=매거진%20제작%20문의" class="btn-primary reveal" style="--d:.2s">
-        문의 메일 보내기 →
-      </a>
+      <div class="contact-form-wrap reveal" style="--d:.2s">
+        <form id="inquiryForm" class="form" novalidate>
+          <!-- ▼▼ Web3Forms access key — web3forms.com 에서 발급받아 value 만 교체하면 작동합니다 ▼▼ -->
+          <input type="hidden" name="access_key" value="WEB3FORMS_ACCESS_KEY_HERE" />
+          <input type="hidden" name="subject" value="[유니콘랩 홈페이지] 매거진 제작 문의" />
+          <input type="hidden" name="from_name" value="유니콘랩 홈페이지" />
+          <!-- 스팸봇 유인용 (사람에게는 안 보임) -->
+          <input type="checkbox" name="botcheck" class="form-hp" tabindex="-1" autocomplete="off" />
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-name">이름 <span class="req">*</span></label>
+              <input type="text" id="f-name" name="이름" required autocomplete="name" placeholder="홍길동" />
+            </div>
+            <div class="form-field">
+              <label for="f-org">기관 · 회사명 <span class="req">*</span></label>
+              <input type="text" id="f-org" name="기관" required autocomplete="organization" placeholder="○○대학교 ○○학과" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="f-email">이메일 <span class="req">*</span></label>
+              <input type="email" id="f-email" name="이메일" required autocomplete="email" placeholder="name@example.com" />
+            </div>
+            <div class="form-field">
+              <label for="f-tel">연락처</label>
+              <input type="tel" id="f-tel" name="연락처" autocomplete="tel" placeholder="010-0000-0000" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="f-type">문의 유형</label>
+            <select id="f-type" name="문의유형">
+              <option>학과 소식지</option>
+              <option>연구소 연보</option>
+              <option>기업 사보</option>
+              <option>창간호 기획</option>
+              <option>정기 발행 운영</option>
+              <option>기타</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label for="f-msg">문의 내용 <span class="req">*</span></label>
+            <textarea id="f-msg" name="문의내용" rows="5" required
+              placeholder="만들고 싶으신 매거진에 대해 편하게 적어주세요. 예상 시기나 분량이 있다면 함께 알려주시면 좋습니다."></textarea>
+          </div>
+
+          <label class="form-agree">
+            <input type="checkbox" id="f-agree" name="개인정보동의" value="동의함" required />
+            <span>문의 답변을 위한 <strong>개인정보 수집 · 이용에 동의</strong>합니다.
+              (수집 항목: 이름 · 기관명 · 이메일 · 연락처 / 보유 기간: 문의 처리 후 1년) <span class="req">*</span></span>
+          </label>
+
+          <button type="submit" class="btn-primary form-submit">문의 보내기 →</button>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          <p class="form-fallback">
+            폼이 잘 안 되시면 <a href="mailto:info@nextio.ai.kr?subject=매거진%20제작%20문의">info@nextio.ai.kr</a> 로 직접 메일 주셔도 됩니다.
+          </p>
+        </form>
+      </div>
+
     </div>
   </section>
 
